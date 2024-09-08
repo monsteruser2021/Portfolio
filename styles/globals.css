@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .nav-link{
+        @apply relative text-white cursor-pointer text-[20px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center hidden
+    }
+
+    .nav-link-mobile{
+        @apply relative mb-[2rem] text-white cursor-pointer text-[30px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center
+    }
+
+    .heading{
+        @apply text-center text-red-800 text-[28px] sm:text-[33px] md:text-[45px] uppercase
+    }
+
+}
