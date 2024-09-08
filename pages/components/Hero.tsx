@@ -40,7 +40,7 @@ function Hero() {
                 </div>
                 <div
                 className='w-[500px] hidden bg-red-950 relative lg:flex items-center rounded-full h-[500px]'>
-                    <Image src="/images/profile.jpeg"
+                    <Image src="./images/profile.jpeg"
                     alt="user" 
                     layout='fill' 
                     className='object-cover rounded-full'/>
