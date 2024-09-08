@@ -15,7 +15,7 @@ function Hero() {
             <div className='w-[80%] grid-cols-1 mx-auto grid lg:grid-cols-2 gap-[3rem] h-[100%] items-center'>
                 <div>
                     <h1 className='text-[40px] md:text[50px] text-white'>
-                        Hi, I'm <span className='text-red-700'>MonsterUser!</span>
+                        Hi, I&apos;m <span className='text-red-700'>MonsterUser!</span>
                     </h1>
                     <TextEffect/>
                     <p className='mt-[1.5rem] text-[20px] text-stone-300'>

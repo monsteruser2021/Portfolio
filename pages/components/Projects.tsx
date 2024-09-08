@@ -46,7 +46,7 @@ const Projects = () => {
                 />
             </div>
             <span className='text-center block text-gray-200 text-[20px] uppercase bg-neutral-700 border-[3px] border-red-800 rounded-lg '>
-                Flyin' Books
+                Flyin&apos; Books
             </span>
         </div>
       </div>
