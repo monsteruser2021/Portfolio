@@ -12,12 +12,14 @@ const Projects = () => {
       <div className='w-[80%] pt-[2rem] pb-[4rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem]'>
         <div data-aos="fade-up">
             <div className='transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]'>
-                <Image 
+              <a href="https://monsteruser2021.github.io/primera-pagina/">
+              <Image 
                 src='./images/p1.jpg'
                 alt='portfolio'
                 layout='fill'
                 className='object-contain'
                 />
+              </a>
             </div>
             <span className='text-center block text-gray-200 text-[20px] uppercase bg-neutral-700 border-[3px] border-red-800 rounded-lg '>
                 First Steps
