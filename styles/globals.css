@@ -1,20 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet')
 layer(base);
 
 @import 'tailwindcss';
 
 @theme {
-  --font-primary: Handjet, sans-serif;
+  --font-primary: "Fira Sans Condensed", sans-serif;
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -26,15 +18,15 @@ layer(base);
 }
 
 @utility nav-link {
-  @apply relative text-white cursor-pointer text-[23px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-200 after:origin-center hidden;
+  @apply relative text-white hover:text-red-700 cursor-pointer text-[22px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-200 after:origin-center hidden;
 }
 
 @utility nav-link-mobile {
-  @apply relative mb-[2rem] text-white cursor-pointer text-[30px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-200 after:origin-center;
+  @apply relative mb-[2rem] text-white cursor-pointer text-[25px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-200 after:origin-center;
 }
 
 @utility heading {
-  @apply text-center text-red-800 text-[28px] sm:text-[33px] md:text-[45px] uppercase;
+  @apply text-center text-red-800 text-[25px] sm:text-[33px] md:text-[45px] uppercase;
 }
 
 /* Custom scrollbar */
@@ -47,10 +39,10 @@ layer(base);
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #b30303;
+    background: #830000;
     border-radius: 5px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #860101;
+    background: #9c0000;
   }

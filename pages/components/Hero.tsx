@@ -30,7 +30,7 @@ function Hero() {
                                 <ArrowDownTrayIcon className='w-[1.6rem] h-[1.7rem] text-black'/>
                             </button>
                         </a>
-                        <button className='flex items-center space-x-2' data-aos="fade-right">
+                        <button className='flex items-center space-x-2'>
                             <PlayCircleIcon className='w-[4rem] h-[4rem] hover:text-red-700 transition-all duration-200 text-gray-400'/>
                             <p className='text-[20px] text-white'>
                                 Watch the video

@@ -23,7 +23,6 @@ const About = () => {
                 </button>
             </div>
             <div
-            data-aos="fade-up-left"
             className='lg:w-[500px] lg:h-[500px] mx-auto mt-[2rem] relative'>
               <Image src="./images/about.jpeg"
               alt='user'

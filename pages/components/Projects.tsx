@@ -10,7 +10,7 @@ const Projects = () => {
         Pro<span className='text-gray-200'>jects</span>
       </h1>
       <div className='w-[80%] pt-[2rem] pb-[4rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem]'>
-        <div data-aos="fade-up">
+        <div>
             <div className='transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]'>
               <a href="https://monsteruser2021.github.io/primera-pagina/">
               <Image 
@@ -25,7 +25,7 @@ const Projects = () => {
                 First Steps
             </span>
         </div>
-        <div data-aos="fade-up" data-aos-delay="300">
+        <div>
             <div className='transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]'>
                 <a href="https://github.com/monsteruser2021/cpp-inventory">
                   <Image 
@@ -40,7 +40,7 @@ const Projects = () => {
                 c++ inventory
             </span>
         </div>
-        <div data-aos="fade-up" data-aos-delay="600">
+        <div>
             <div className='transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]'>
                 <a href="https://flyin-books.netlify.app/">
                   <Image 
