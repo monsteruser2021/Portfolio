@@ -18,3 +18,21 @@
     }
 
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #7e7e7e;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #b30303;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #860101;
+  }

@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <div
     id='projects'
-    className='bg-neutral-900 w-screen pt-[4rem] md:pt-[8rem] pb-[4rem]'>
+    className='bg-neutral-900 w-full pt-[4rem] md:pt-[8rem] pb-[4rem]'>
       <h1 className='heading'>
         Pro<span className='text-gray-200'>jects</span>
       </h1>

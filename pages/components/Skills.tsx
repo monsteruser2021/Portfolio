@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <div
     id='skills'
-    className='w-screen pt-[4rem] md:pt-[8rem] pb-[5rem] bg-neutral-800'>
+    className='w-full pt-[4rem] md:pt-[8rem] pb-[5rem] bg-neutral-800'>
       <h1 className='heading' data-aos="zoom-in">
         Education & <span className='text-gray-100'>Skills</span>
       </h1>
