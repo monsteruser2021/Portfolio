@@ -14,7 +14,7 @@ const About = () => {
                 Creative thinking,  <span className='text-gray-300'>innovative solutions</span>
                 </h2>
                 <div className='mb-[3rem] flex items-center md:space-x-10'>
-                  <span className='w-[100px] hidden md:block h-[5px] bg-slate-400 rounded-sm'></span>
+                  <span className='w-[100px] hidden md:block h-[5px] bg-slate-400 rounded-xs'></span>
                   <p className='text-[19px] text-slate-300 w-[80%]'>Innovation is my driving force. I enjoy the process of coming up with creative solutions to everyday problems. My approach is based on critical thinking and problem solving, which allows me to find unique perspectives and develop efficient solutions. I believe that technology should be a tool to drive creativity and generate positive change.</p>
                 </div>
                 <button className='px-[2rem] hover:bg-red-700 transition-all duration-200 py-[1rem] text-[18px] uppercase bg-gray-400 text-black flex items-center space-x-2 rounded-lg'>
@@ -30,9 +30,9 @@ const About = () => {
               width={500}
               height={500}
               objectFit='contain, cover' 
-              className='relative z-[11] w-[100%] h-[100%] rounded-lg'
+              className='relative z-11 w-[100%] h-[100%] rounded-lg'
               />
-              <div className='absolute w-[100%] h-[100%] z-[10] bg-zinc-900 top-[-2rem] right-[-2rem] rounded-lg'>
+              <div className='absolute w-[100%] h-[100%] z-10 bg-zinc-900 top-[-2rem] right-[-2rem] rounded-lg'>
 
               </div>
             </div>

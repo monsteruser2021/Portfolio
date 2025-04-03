@@ -1,22 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer components{
-    .nav-link{
-        @apply relative text-white cursor-pointer text-[23px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center hidden
-    }
+@theme {
+  --font-primary: Handjet, sans-serif;
+}
 
-    .nav-link-mobile{
-        @apply relative mb-[2rem] text-white cursor-pointer text-[30px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center
-    }
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-    .heading{
-        @apply text-center text-red-800 text-[28px] sm:text-[33px] md:text-[45px] uppercase
-    }
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
+@utility nav-link {
+  @apply relative text-white cursor-pointer text-[23px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-200 after:origin-center hidden;
+}
+
+@utility nav-link-mobile {
+  @apply relative mb-[2rem] text-white cursor-pointer text-[30px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-200 after:origin-center;
+}
+
+@utility heading {
+  @apply text-center text-red-800 text-[28px] sm:text-[33px] md:text-[45px] uppercase;
 }
 
 /* Custom scrollbar */

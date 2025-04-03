@@ -24,21 +24,21 @@ const SkillsLanguage = ({
     data-aos-easing="linear"
     data-aos-duration="1500">
       <div className='relative mb-[3rem]'>
-        <h1 className='p-5 w-[100%] uppercase bg-neutral-700 rounded-sm text-gray-200 text-[20px]'>
+        <h1 className='p-5 w-[100%] uppercase bg-neutral-700 rounded-xs text-gray-200 text-[20px]'>
           {skill1}
         </h1>
         <span className={`${level1} bottom-0 h-[6px] absolute bg-red-800`}
         ></span>
       </div>
       <div className='relative mb-[3rem]'>
-        <h1 className='p-5 w-[100%] uppercase bg-neutral-700 rounded-sm text-gray-200 text-[20px]'>
+        <h1 className='p-5 w-[100%] uppercase bg-neutral-700 rounded-xs text-gray-200 text-[20px]'>
           {skill2}
         </h1>
         <span className={`${level2} bottom-0 h-[6px] absolute bg-red-800`}
         ></span>
       </div>
       <div className='relative mb-[3rem]'>
-        <h1 className='p-5 w-[100%] uppercase bg-neutral-700 rounded-sm text-gray-200 text-[20px]'>
+        <h1 className='p-5 w-[100%] uppercase bg-neutral-700 rounded-xs text-gray-200 text-[20px]'>
           {skill3}
         </h1>
         <span className={`${level3} bottom-0 h-[6px] absolute bg-red-800`}
