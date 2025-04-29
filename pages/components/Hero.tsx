@@ -9,9 +9,14 @@ function Hero() {
     return (
         <div 
         id='hero'
-        className="h-[88vh] w-full mt-[12vh] bg-neutral-900">
-            <Particle/>
-            <div className='w-[80%] grid-cols-1 mx-auto grid lg:grid-cols-2 gap-[3rem] h-[100%] items-center'>
+        className="relative h-[88vh] w-full mt-[12vh] bg-neutral-900 overflow-hidden">
+            {/* Particles as background */}
+            <div className="absolute inset-0 z-0">
+                <Particle />
+            </div>
+
+            {/* Content */}
+            <div className='relative z-10 w-[80%] grid-cols-1 mx-auto grid lg:grid-cols-2 gap-[3rem] h-[100%] items-center'>
                 <div>
                     <h1 className='text-[40px] md:text[50px] text-white'>
                         Hi, I&apos;m <span className='text-red-700'>MonsterUser!</span>
@@ -51,4 +56,4 @@ function Hero() {
     );
 }
 
-export default Hero
+export default Hero;

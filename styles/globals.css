@@ -3,10 +3,6 @@ layer(base);
 
 @import 'tailwindcss';
 
-@theme {
-  --font-primary: "Fira Sans Condensed", sans-serif;
-}
-
 @layer base {
   *,
   ::after,

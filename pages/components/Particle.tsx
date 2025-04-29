@@ -1,105 +1,92 @@
 import { useCallback } from "react";
- import type { Container, Engine } from "tsparticles-engine";
- import Particles from "react-tsparticles";
- //import { loadFull } from "tsparticles";  //if you are going to use `loadFull`, install the "tsparticles" package too.
- import { loadSlim } from "tsparticles-slim";  //if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import type { Container, Engine } from "tsparticles-engine";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim"; // Asegúrate de que esté instalado este paquete
 
- const Particle = () => {
-   const particlesInit = useCallback(async (engine: Engine) => {
-     console.log(engine);
+const Particle = () => {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
+    await loadSlim(engine);
+  }, []);
 
-      //you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
-      //this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      //starting from v2 you can add only the features you need reducing the bundle size
-     //await loadFull(engine);
-     await loadSlim(engine);
-   }, []);
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {
+      await console.log(container);
+    },
+    []
+  );
 
-   const particlesLoaded = useCallback(
-     async (container: Container | undefined) => {
-       await console.log(container);
-     },
-     []
-   );
+  return (
+    <div className="relative w-full h-screen bg-black">
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={{
+          background: {
+            color: "#000",
+            repeat: "no-repeat",
+            size: "40%",
+            position: "60% 50%",
+          },
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "repulse",
+              },
+              onHover: {
+                enable: true,
+                mode: "bubble",
+              },
+            },
+            modes: {
+              bubble: {
+                distance: 200,
+                duration: 2,
+                opacity: 0,
+                size: 0,
+                speed: 3,
+              },
+              repulse: {
+                distance: 400,
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: { value: "#ffffff" },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: "out",
+              random: true,
+              speed: 0.3,
+            },
+            number: {
+              density: {
+                enable: true,
+              },
+              value: 600,
+            },
+            opacity: {
+              animation: {
+                enable: true,
+                speed: 5,
+              },
+              value: { min: 0.3, max: 0.6 },
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: 1,
+            },
+          },
+        }}
+      />
+    </div>
+  );
+};
 
-   return (
-     <div>
-       <Particles
-         id="tsparticles"
-         init={particlesInit}
-         loaded={particlesLoaded}
-         options={{
-           background: {
-                color: {
-                  value: "#1c2833 ",
-                },
-           },
-           fpsLimit: 120,
-           interactivity: {
-             events: {
-               onClick: {
-                 enable: true,
-                 mode: "push",
-               },
-               onHover: {
-                 enable: true,
-                 mode: "repulse",
-               },
-               resize: true,
-             },
-             modes: {
-               push: {
-                 quantity: 4,
-               },
-               repulse: {
-                 distance: 200,
-                 duration: 0.4,
-               },
-             },
-           },
-           particles: {
-             color: {
-               value: "#ffffff",
-             },
-             links: {
-               color: "#ffffff",
-               distance: 120,
-               enable: true,
-               opacity: 0.5,
-               width: 1,
-             },
-             move: {
-               direction: "none",
-               enable: true,
-               outModes: {
-                 default: "bounce",
-               },
-               random: false,
-               speed: 1.5,
-               straight: false,
-             },
-             number: {
-               density: {
-                 enable: true,
-                 area: 800,
-               },
-               value: 80,
-             },
-             opacity: {
-               value: 0.5,
-             },
-             shape: {
-               type: "triangle",
-             },
-             size: {
-               value: { min: 1, max: 3 },
-             },
-           },
-           detectRetina: true,
-         }}
-       />
-     </div>
-   );
- };
-
- export default Particle;
+export default Particle;
