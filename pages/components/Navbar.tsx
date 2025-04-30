@@ -6,7 +6,7 @@ interface Props {
 
 const Navbar = ({openNav}:Props) => {
 
-  return <div className='w-full fixed z-10000 top-0 h-auto py-[0.5rem] bg-[#191919]'>
+  return <div className='w-full fixed z-10000 top-0 h-auto py-[0.5rem] bg-[#000]'>
     <div className='flex items-center justify-between w-[80%] mx-auto h-[100%]'>
         <h1 className='flex-[0.8] font-bold text-[2.5rem] text-white'>
             Dev<span className='text-red-700'>eloper</span>
