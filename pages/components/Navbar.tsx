@@ -6,17 +6,13 @@ interface Props {
 
 const Navbar = ({openNav}:Props) => {
 
-  return <div className='w-full fixed z-10000 top-0 h-[12vh] bg-stone-950 shadow-md'>
+  return <div className='w-full fixed z-10000 top-0 h-auto py-[0.5rem] bg-[#191919]'>
     <div className='flex items-center justify-between w-[80%] mx-auto h-[100%]'>
-        <h1 className='flex-[0.8] cursor-pointer text-[45px] text-white'>
-            Web 
-            <span className='text-red-700'>Dev</span>
+        <h1 className='flex-[0.8] font-bold text-[2.5rem] text-white'>
+            Dev<span className='text-red-700'>eloper</span>
         </h1>
         <div className='nav-link'>
             <a href="#hero">HOME</a>
-        </div>
-        <div className='nav-link'>
-            <a href="#about">ABOUT</a>
         </div>
         <div className='nav-link'>
             <a href="#services">SERVICES</a>
@@ -26,6 +22,9 @@ const Navbar = ({openNav}:Props) => {
         </div>
         <div className='nav-link'>
             <a href="#projects">PROJECTS</a>
+        </div>
+        <div className='nav-link'>
+            <a href="#about">ABOUT</a>
         </div>
         <div className='nav-link'>
             <a href="#contact">CONTACT</a>

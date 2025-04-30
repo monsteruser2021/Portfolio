@@ -19,22 +19,22 @@ const MobileNav = ({nav, closeNav}:Props) => {
         <div
         onClick={closeNav} 
         className='nav-link-mobile'>
-        <a href="#about">ABOUT</a>
-        </div>
-        <div
-        onClick={closeNav} 
-        className='nav-link-mobile'>
         <a href="#services">SERVICES</a>
         </div>
         <div
         onClick={closeNav} 
         className='nav-link-mobile'>
-        <a href="#skills">SKILLS</a>
+        <a href="#sills">SKILLS</a>
+        </div>
+        <div
+        onClick={closeNav} 
+        className='nav-link-mobile'>
+        <a href="#projects">PROJECTS</a>
         </div>
         <div
         onClick={closeNav}
         className='nav-link-mobile'>
-        <a href="#projects">PROJECTS</a>
+        <a href="#about">ABOUT</a>
         </div>
         <div 
         onClick={closeNav} 

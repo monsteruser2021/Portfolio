@@ -14,11 +14,11 @@ layer(base);
 }
 
 @utility nav-link {
-  @apply relative text-white hover:text-red-700 cursor-pointer text-[22px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-200 after:origin-center hidden;
+  @apply relative text-white hover:text-red-700 font-semibold cursor-pointer text-[1.2rem] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-200 after:origin-center hidden;
 }
 
 @utility nav-link-mobile {
-  @apply relative mb-[2rem] text-white cursor-pointer text-[25px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-200 after:origin-center;
+  @apply relative mb-[2rem] text-white cursor-pointer text-[1.3rem] font-semibold w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-200 after:origin-center;
 }
 
 @utility heading {
