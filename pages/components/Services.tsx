@@ -1,44 +1,98 @@
-import { Cog8ToothIcon, PaintBrushIcon, ServerStackIcon } from '@heroicons/react/20/solid'
-import React from 'react'
+import React from "react";
+import Image from "next/image";
 
-const Services = () => {
+// Reusable Card Component
+type CardProps = {
+  title: string;
+  subtitle: string;
+  highlight: string;
+  imageSrc: string;
+};
+
+const Card: React.FC<CardProps> = ({ title, subtitle, highlight, imageSrc}) => {
   return (
-    <div
-    id='services'
-    className='bg-neutral-900 w-full pt-[4rem] md:pt-[8rem] pb-[5rem]'>
-        <p className='heading'>My<span className='text-gray-100'>Services</span>
-        </p>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto items-center gap-[4rem] mt-[4rem] text-white'>
-          <div data-aos="fade-right">
-            <div className='bg-slate-600 hover:scale-110 transform transition-all duration-300 hover:-rotate-6 uppercase text-center p-[2rem] border-[5px] border-gray-200 rounded-lg'>
-              <PaintBrushIcon className='w-[6rem] h-[6rem] mx-auto text-gray-100'/>
-              <h1 className='text-[20px] md:text-[30px] mt-[1.5rem] mb-[1.5rem]'>Front-end</h1>
-              <p className='text-[13px] text-gray-100'>
-              I create exceptional user experiences through attractive and functional front-end interfaces. I use the latest technologies to build custom and responsive interfaces that adapt to any device.
-              </p>
-            </div>
-          </div>
-          <div data-aos="zoom-in" data-aos-delay="300">
-            <div className='bg-slate-700 hover:scale-110 transform transition-all duration-300 hover:-rotate-6 uppercase text-center p-[2rem] border-[5px] border-gray-200 rounded-lg'>
-              <ServerStackIcon className='w-[6rem] h-[6rem] mx-auto text-gray-100'/>
-              <h1 className='text-[20px] md:text-[30px] mt-[1.5rem] mb-[1.5rem]'>Back-end</h1>
-              <p className='text-[13px] text-gray-100'>
-              I build the solid foundation of your web applications with a robust and scalable backend. I use frameworks to develop efficient APIs and manage databases securely.
-              </p>
-            </div>
-          </div>
-          <div data-aos="fade-left" data-aos-delay="500">
-            <div className='bg-slate-800 hover:scale-110 transform transition-all duration-300 hover:-rotate-6 uppercase text-center p-[2rem] border-[5px] border-gray-200 rounded-lg'>
-              <Cog8ToothIcon className='w-[6rem] h-[6rem] mx-auto text-gray-100'/>
-              <h1 className='text-[20px] md:text-[30px] mt-[1.5rem] mb-[1.5rem]'>Others</h1>
-              <p className='text-[13px] text-gray-100'>
-              I also offer a wide range of services including: Design for the creation of intuitive and attractive designs, advice on the choice of technologies and ongoing maintenance of your applications.
-              </p>
-            </div>
-          </div>
-        </div>
-    </div>
-  )
-}
+    <div className="relative group w-[70%] sm:w-[80%] md:w-[23%] mx-[5%] my-[10%] md:my-[5%] aspect-[190/254]">
+      {/* Neon shadow effect */}
+      <div
+        className="absolute inset-0 -m-[5px] rounded-[10px] bg-gradient-to-br from-[#ececec] to-[#b3b3b3] z-0 blur-[1rem] opacity-70 pointer-events-none transition-transform duration-600 group-hover:rotate-[-90deg] group-hover:scale-x-[1.34] group-hover:scale-y-[0.77]"
+      ></div>
 
-export default Services
+      {/* Rotating gradient border */}
+      <div
+        className="absolute inset-0 -m-[5px] rounded-[10px] bg-gradient-to-br from-[#ececec] to-[#b3b3b3] z-0 pointer-events-none transition-transform duration-600 group-hover:rotate-[-90deg] group-hover:scale-x-[1.34] group-hover:scale-y-[0.77]"
+      ></div>
+
+      {/* Card content */}
+      <div className="relative w-full h-full bg-black rounded-lg flex flex-col overflow-hidden text-white p-4">
+        {/* Image */}
+        <div className="w-full h-[50%] mb-[10%] relative">
+          <Image
+            src={imageSrc}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+            className="rounded-t-lg"
+          />
+        </div>
+        <div className="flex flex-col justify-end p-4 gap-2 md:gap-1 h-[50%] mt-auto">
+          <p className="text-[18px] capitalize font-bold mt-2">{title}</p>
+          <p className="text-[14px]">{subtitle}</p>
+          <p className="text-[14px] font-semibold">
+            {highlight}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Services Component
+const Services: React.FC = () => {
+  const cards = [
+    {
+      title: "Custom Development",
+      subtitle: "Tailored Solutions",
+      highlight: "Innovation",
+      gradientFrom: "#e81cff",
+      gradientTo: "#40c9ff",
+      imageSrc: "/images/p1.jpg",
+    },
+    {
+      title: "Creative Design",
+      subtitle: "UI/UX Design",
+      highlight: "Creativity",
+      gradientFrom: "#fc00ff",
+      gradientTo: "#00dbde",
+      imageSrc: "/images/p1.jpg",
+    },
+    {
+      title: "Cloud Services",
+      subtitle: "Scalable Systems",
+      highlight: "Efficiency",
+      gradientFrom: "#8e2de2",
+      gradientTo: "#4a00e0",
+      imageSrc: "/images/p1.jpg",
+    },
+  ];
+
+  return (
+    <div id="services" className="bg-neutral-900 w-full py-[4rem]">
+      <p className="heading text-center text-gray-100 text-[2rem] font-bold">
+        My <span className="text-red-700 ">Services</span>
+      </p>
+      <div className="flex flex-wrap justify-center mt-[4rem] gap-y-[5%] w-[90%] mx-auto">
+        {cards.map((card, index) => (
+          <Card
+            key={index}
+            title={card.title}
+            subtitle={card.subtitle}
+            highlight={card.highlight}
+            imageSrc={card.imageSrc}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Services;

@@ -22,7 +22,7 @@ layer(base);
 }
 
 @utility heading {
-  @apply text-center text-red-800 text-[25px] sm:text-[33px] md:text-[45px] uppercase;
+  @apply text-center text-red-800 text-[1.2rem] sm:text-[2rem] md:text-[2.8rem] uppercase font-bold;
 }
 
 /* Custom scrollbar */

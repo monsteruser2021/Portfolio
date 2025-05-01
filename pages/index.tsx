@@ -4,6 +4,7 @@ import MobileNav from './components/MobileNav';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
+import Services2 from './components/Services2';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
@@ -19,10 +20,12 @@ const HomePage = () => {
       <Navbar openNav={openNav}/>
       <Hero/>
       <div className='relative z-30'>
-        <About/>
         <Services/>
+        <Services2/>
         <Skills/>
         <Projects/>
+        <About/>
+        {/*Contact*/}
         <Footer/>
       </div>
     </div>
