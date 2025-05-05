@@ -76,11 +76,11 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div id="services" className="bg-neutral-900 w-full py-[4rem]">
+    <div id="services" className="bg-neutral-900 w-full py-[4rem] ">
       <p className="heading text-center text-gray-100 text-[2rem] font-bold">
         My <span className="text-red-700 ">Services</span>
       </p>
-      <div className="flex flex-wrap justify-center mt-[4rem] gap-y-[5%] w-[90%] mx-auto">
+      <div className="flex flex-wrap justify-center my-[4rem] gap-y-[5%] w-[70%] mx-auto">
         {cards.map((card, index) => (
           <Card
             key={index}
