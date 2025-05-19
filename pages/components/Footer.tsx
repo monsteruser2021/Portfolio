@@ -53,7 +53,7 @@ const Footer = () => {
       </div>
       <div className='w-[80%] mt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-between '>
         <div className='text-[16px] mb-[2rem] md:mb-0 text-gray-100 '>
-            Carlos E. Servando C. // All Rights reserved.
+            Developed by <span className='text-red-700'>Monsteruser2021</span> // All Rights reserved.
         </div>
         <div className='flex items-center space-x-10 '>
             <p className='text-[16px] text-gray-200 '>Terms & Conditions</p>

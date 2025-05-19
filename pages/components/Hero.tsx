@@ -28,7 +28,7 @@ function Hero() {
                     Welcome to my digital portfolio. Here you will find a sample of my most outstanding projects in the IT field, through each work, you can see my growth as a developer and my constant search for innovation.
                     </p>
                     <div className='mt-[2rem] flex-col space-y-6 sm:space-y-0 sm:flex sm:flex-row items-center sm:space-x-6'>
-                        <a href="https://drive.google.com/file/d/1BjkbvYLaYuFm3xr0FZThAwzRqyKABca4/view">
+                        <a href="https://drive.google.com/file/d/1IH0p8Hoi26IjwQC5U2dtClEv68B_jRCZ/view?usp=sharing">
                             <button className='cursor-pointer px-[2rem] hover:bg-red-800 transition-all duration-200 py-[1rem] text-[18px] uppercase bg-gray-400 text-black flex items-center space-x-2 rounded-full'
                             >
                                 <p>

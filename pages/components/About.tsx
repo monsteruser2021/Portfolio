@@ -34,7 +34,7 @@ const About = () => {
             technology should be a tool to drive creativity and generate
             positive change.
           </p>
-          <motion.button
+          {/*<motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="group px-[2rem] py-[1rem] mt-[2rem] text-[18px] uppercase bg-gray-400 text-black flex items-center space-x-2 rounded-lg hover:bg-red-700 transition-all duration-300"
@@ -43,7 +43,7 @@ const About = () => {
               Learn More
             </p>
             <ArrowRightIcon className="w-[1.6rem] h-[1.7rem] text-black group-hover:text-white transition-all duration-300" />
-          </motion.button>
+          </motion.button>*/}
         </motion.div>
 
         {/* Right Section */}
@@ -61,8 +61,8 @@ const About = () => {
             objectFit="cover"
             className="relative z-20 w-[100%] h-[100%] rounded-lg shadow-lg"
           />
-          <div className="absolute w-[100%] h-[100%] z-10 bg-red-800/20 top-[1.5rem] left-[1.5rem] rounded-lg blur-md"></div>
-          <div className="absolute w-[100%] h-[100%] z-0 bg-zinc-900 top-[2rem] left-[2rem] rounded-lg"></div>
+          <div className="absolute w-[100%] h-[100%] z-10 bg-zinc-500 top-[1.5rem] left-[1.5rem] rounded-lg blur-md"></div>
+          {/**<div className="absolute w-[100%] h-[100%] z-0 bg-zinc-800 top-[2rem] left-[2rem] rounded-lg"></div> */}
         </motion.div>
       </div>
     </div>
