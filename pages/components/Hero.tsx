@@ -50,7 +50,7 @@ function Hero() {
         <div className='width-[50%] '>
           <div
           className='w-[500px] hidden bg-black relative lg:flex object-fill rounded-full h-[500px] ml-auto'>
-              <Image src="/images/profile.png"
+              <Image src="/profile.png"
               alt="user" 
               width={500}
               height={500}
