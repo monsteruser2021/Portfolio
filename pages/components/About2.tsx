@@ -64,7 +64,7 @@ const About2 = () => {
         {/*Right section */}
         <div className='w-[500px] hidden bg-red-950 relative lg:flex object-fill rounded-full h-[500px] ml-auto'>
           <Image
-            src="/images/about.jpeg"
+            src="/about.jpeg"
             alt="user"
             className='object-cover rounded-lg w-[100%] h-[100%] shadow-[10px_10px_20px_rgba(145,145,145,0.8)]'
             width={500}
