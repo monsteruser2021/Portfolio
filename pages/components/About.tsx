@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from 'framer-motion';
-import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import React from 'react';
 

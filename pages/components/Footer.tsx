@@ -1,66 +1,81 @@
-import { DevicePhoneMobileIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/20/solid'
-import React from 'react'
+import React, { useState } from 'react'
+
+const termsText = (
+  <>
+    <h2 className="text-[#e84624] text-lg font-bold mb-2">Términos y Condiciones</h2>
+    <p className="text-sm text-gray-300 mb-2">
+      Este portafolio tiene fines informativos y promocionales sobre los servicios de diseño, desarrollo frontend y aplicaciones web ofrecidos por MonsterUser. No se realizan transacciones, pagos ni contrataciones directas a través de este sitio. Para solicitar información detallada, presupuestos o contratar un servicio, deberás ponerte en contacto directamente mediante los canales indicados en la sección de contacto.
+    </p>
+    <p className="text-xs text-gray-400">
+      El contenido mostrado es propiedad de MonsterUser. El uso de la información aquí publicada no implica relación contractual directa, salvo acuerdo posterior por escrito.
+    </p>
+  </>
+);
+
+const privacyText = (
+  <>
+    <h2 className="text-[#e84624] text-lg font-bold mb-2">Política de Privacidad</h2>
+    <p className="text-sm text-gray-300 mb-2">
+      Este sitio web no recopila datos personales de los visitantes de forma automática, no utiliza cookies ni mecanismos de seguimiento. La única información que puedes proporcionar es a través del formulario de contacto, y será utilizada exclusivamente para responder a tus consultas o solicitudes de información sobre los servicios ofrecidos. No se comparte tu información con terceros.
+    </p>
+    <p className="text-xs text-gray-400">
+      Si tienes dudas sobre cómo se gestionan tus datos, puedes contactarme a través del correo publicado en la sección de contacto.
+    </p>
+  </>
+);
 
 const Footer = () => {
+  const [popup, setPopup] = useState<null | 'terms' | 'privacy'>(null);
+
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) setPopup(null);
+  };
+
   return (
-    <div
-    id='contact'
-    className='pt-[8rem] pb-[4rem] w-full bg-neutral-800 '>
-      <div className='grid border-b-[1px] pb-[6rem] border-gray-400 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-[80%] mx-auto gap-[3rem] '>
-        <div className='flex items-center space-x-6' data-aos="zoom-out">
-            <div className='md:w-[6.5rem] md:h-[6.5rem] w-[5rem] h-[5rem] flex items-center justify-center rounded-full bg-red-800 '>
-                <MapPinIcon className='md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black '/>
-            </div>
-            <div>
-                <h1 className='text-[25px] mb-[0.2rem] text-gray-200 '>
-                    Address
-                </h1>
-                <p className='text-[17px] w-[90%] text-gray-200 opacity-60 '>
-                    Caracas, VE
-                </p>
-            </div>
+    <div className='bg-[#000] w-full py-[2rem] relative'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-[2rem]'>
+        {/* Left section */}
+        <div className='text-start w-[75%] mx-auto text-gray-300'>
+          <p className='text-md'>© 2025 MonsterUser. Todos los derechos reservados.</p>
+          <p className='text-md mt-2'>Desarrollado con ❤️ por MonsterUser</p>
         </div>
-        <div className='flex items-center space-x-6' data-aos="zoom-out">
-            <div className='md:w-[6.5rem] md:h-[6.5rem] w-[5rem] h-[5rem] flex items-center justify-center rounded-full bg-red-800 '>
-                <a href="https://wa.me/584126338516">
-                <DevicePhoneMobileIcon className='md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black '/>
-                </a>
-            </div>
-            <div>
-                <h1 className='text-[25px] mb-[0.2rem] text-gray-200 '>
-                    Phone
-                </h1>
-                <p className='text-[17px] w-[90%] text-gray-200 opacity-60 '>
-                    +58 412 633 85 16
-                </p>
-            </div>
-        </div>
-        <div className='flex items-center space-x-6' data-aos="zoom-out">
-            <div className='md:w-[6.5rem] md:h-[6.5rem] w-[5rem] h-[5rem] flex items-center justify-center rounded-full bg-red-800 '>
-                <a href="mailto:monsteruser2021@gmail.com">
-                <EnvelopeIcon className='md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black '/>
-                </a>
-            </div>
-            <div>
-                <h1 className='text-[25px] mb-[0.2rem] text-gray-200 '>
-                    Send Me Email
-                </h1>
-                <p className='text-[17px] w-[90%] text-gray-200 opacity-60 '>
-                    monsteruser2021@gmail.com
-                </p>
-            </div>
+        {/* Right section */}
+        <div className='w-[75%] mx-auto text-end text-gray-300 mt-4 flex flex-col items-end gap-2'>
+          <button
+            onClick={() => setPopup('terms')}
+            className="text-sm hover:text-[#e84624] transition-colors duration-200"
+            type="button"
+          >
+            Términos y Condiciones
+          </button>
+          <button
+            onClick={() => setPopup('privacy')}
+            className="text-sm hover:text-[#e84624] transition-colors duration-200"
+            type="button"
+          >
+            Política de Privacidad
+          </button>
         </div>
       </div>
-      <div className='w-[80%] mt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-between '>
-        <div className='text-[16px] mb-[2rem] md:mb-0 text-gray-100 '>
-            Developed by <span className='text-red-700'>Monsteruser2021</span> // All Rights reserved.
+      {/* Popup modal */}
+      {popup && (
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center"
+          onClick={handleBackdropClick}
+        >
+          <div className="bg-zinc-900 border border-zin-300 rounded-lg shadow-lg p-6 w-[90%] max-w-[370px] relative animate-fade-in">
+            <button
+              onClick={() => setPopup(null)}
+              className="absolute top-2 right-2 text-gray-400 hover:text-[#e84624] text-xl font-bold"
+              aria-label="Cerrar"
+              type="button"
+            >
+              ×
+            </button>
+            {popup === 'terms' ? termsText : privacyText}
+          </div>
         </div>
-        <div className='flex items-center space-x-10 '>
-            <p className='text-[16px] text-gray-200 '>Terms & Conditions</p>
-            <p className='text-[16px] text-gray-200 '>Privacy Policy</p>
-            <p className='text-[16px] text-gray-200 '>Sitemap</p>
-        </div>
-      </div>
+      )}
     </div>
   )
 }

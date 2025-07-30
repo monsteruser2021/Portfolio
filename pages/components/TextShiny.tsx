@@ -3,7 +3,7 @@ import type { ComponentProps, ReactNode } from "react";
 // import "./shiny-text.css";
 const ShinyText = ({
   children,
-  speedInMs = 5000,
+  speedInMs = 7000,
   className,
   ...props
 }: {
@@ -29,7 +29,7 @@ const ShinyText = ({
           "inline-block bg-clip-text text-transparent",
           "bg-linear-to-r from-35% via-50% to-65%",
           "from-neutral-400 via-neutral-950 to-neutral-400",
-          "dark:from-[#c40101] dark:via-neutral-50 dark:to-[#dd0101]",
+          "dark:from-[#e27231] dark:via-neutral-50 dark:to-[#d35a19]",
           className,
         )}
         style={{

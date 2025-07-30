@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim"; // Asegúrate de que esté instalado este paquete
+import { loadSlim } from "tsparticles-slim";
 
 const Particle = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -80,7 +80,7 @@ const Particle = () => {
               type: "circle",
             },
             size: {
-              value: 1,
+              value: 2,
             },
           },
         }}
