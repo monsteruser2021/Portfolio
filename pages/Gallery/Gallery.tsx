@@ -17,7 +17,7 @@ const PROJECTS = [
   {
     id: 1,
     destacado: true,
-    imagen: './images/p1.png',
+    imagen: '/images/p1.png',
     tipo: 'uiux',
     tipoLabel: 'UI/UX',
     titulo: 'Diseño de UI/UX para aplicación de ferias de negocios',
@@ -28,7 +28,7 @@ const PROJECTS = [
   {
     id: 2,
     destacado: false,
-    imagen: './images/p2.png',
+    imagen: '/images/p2.png',
     tipo: 'pagina',
     tipoLabel: 'Páginas Web',
     titulo: 'Catálogo digital de productos personalizados',
@@ -39,7 +39,7 @@ const PROJECTS = [
   {
     id: 3,
     destacado: true,
-    imagen: './images/p3.png',
+    imagen: '/images/p3.png',
     tipo: 'pagina',
     tipoLabel: 'Páginas Web',
     titulo: 'Página web para estilista profesional',
@@ -50,7 +50,7 @@ const PROJECTS = [
   {
     id: 4,
     destacado: false,
-    imagen: './images/p4.png',
+    imagen: '/images/p4.png',
     tipo: 'inventario',
     tipoLabel: 'Inventario',
     titulo: 'Inventario simple para bienes públicos',
@@ -61,7 +61,7 @@ const PROJECTS = [
   {
     id: 5,
     destacado: true,
-    imagen: './images/p5.png',
+    imagen: '/images/p5.png',
     tipo: 'uiux',
     tipoLabel: 'UI/UX',
     titulo: 'Diseño UI/UX para Portal de Apps Web',
@@ -72,7 +72,7 @@ const PROJECTS = [
   {
     id: 6,
     destacado: false,
-    imagen: './images/p6.png',
+    imagen: '/images/p6.png',
     tipo: 'pagina',
     tipoLabel: 'Páginas Web',
     titulo: 'Página web para fanáticos de los Chevrolet Camaro',
@@ -83,7 +83,7 @@ const PROJECTS = [
   {
     id: 7,
     destacado: false,
-    imagen: './images/p7.png',
+    imagen: '/images/p7.png',
     tipo: 'uiux',
     tipoLabel: 'UI/UX',
     titulo: 'Portafolio para Artista 3D y Modder (Diseño UI/UX)',
@@ -94,7 +94,7 @@ const PROJECTS = [
   {
     id: 8,
     destacado: false,
-    imagen: './images/p8.png',
+    imagen: '/images/p8.png',
     tipo: 'pagina',
     tipoLabel: 'Páginas Web',
     titulo: 'Página web para el cuidado de la salud mental',

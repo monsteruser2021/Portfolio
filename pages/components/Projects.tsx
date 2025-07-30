@@ -77,19 +77,19 @@ const Projects: React.FC = () => {
   // Data for the cards
   const cards = [
     {
-      imageSrc: './images/p3.png',
+      imageSrc: '/images/p3.png',
       title: 'Página web para estilista profesional',
       description: 'Este proyecto es el desarrollo de un sitio web profesional diseñado específicamente para un estilista, funcionando como un portafolio digital inmersivo.',
       previewLink: 'https://ruxstylist.netlify.app/',
     },
     {
-      imageSrc: './images/p0.png',
+      imageSrc: '/images/p0.png',
       title: 'Diseño de UI/UX para página web de productos personalizados (móviles)',
       description: 'El proyecto se centró en la creación de una experiencia intuitiva y visualmente atractiva. Se destacan las habilidades en la navegación guiada y presentación clara de opciones.',
       previewLink: 'https://example.com/project2',
     },
     {
-      imageSrc: './images/p1.png',
+      imageSrc: '/images/p1.png',
       title: 'Diseño de UI/UX para aplicación de ferias de negocios',
       description: 'Este proyecto muestra el diseño UI/UX de una aplicación web para ferias de negocios, concebida para mejorar la experiencia de expositores y visitantes.',
       previewLink: '#',
