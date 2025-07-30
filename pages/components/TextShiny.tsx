@@ -1,4 +1,4 @@
-import { cn } from "@/pages/utils/cn";
+import { cn } from "@/utils/cn";
 import type { ComponentProps, ReactNode } from "react";
 // import "./shiny-text.css";
 const ShinyText = ({
