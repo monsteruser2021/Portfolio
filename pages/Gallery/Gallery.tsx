@@ -10,6 +10,7 @@ const FILTERS = [
   { label: 'Paginas web', value: 'pagina' },
   { label: 'UI/UX', value: 'uiux' },
   { label: 'Inventario', value: 'inventario' },
+  { label: 'Wirefrane', value: 'wireframe' },
 ];
 
 // Array de proyectos editables
@@ -34,7 +35,7 @@ const PROJECTS = [
     titulo: 'Catálogo digital de productos personalizados',
     descripcion: 'Proyecto web diseñado para la exhibición interactiva de artículos personalizados. Enfocado en una interfaz de usuario intuitiva y la presentación dinámica de productos, este desarrollo demuestra mi capacidad para crear soluciones visuales efectivas para el comercio de productos a medida.',
     tecnologias: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
-    enlace: 'https://ejemplo.com/dashboard',
+    enlace: 'https://pk-catalog.netlify.app/',
   },
   {
     id: 3,
@@ -101,6 +102,17 @@ const PROJECTS = [
     descripcion: 'Este proyecto es el desarrollo de una página web dedicada al cuidado de la salud mental, creada como parte de una práctica universitaria. Su principal objetivo es ofrecer un recurso accesible y de apoyo para usuarios interesados en el bienestar psicológico. La plataforma incorpora información relevante, recursos útiles y posiblemente funcionalidades interactivas.',
     tecnologias: ['HTML', 'CSS', 'JavaScript'],
     enlace: 'https://monsteruser2021.github.io/vital-mind/',
+  },
+  {
+    id: 10,
+    destacado: false,
+    imagen: '/p10.png',
+    tipo: 'wireframe',
+    tipoLabel: 'Wireframe',
+    titulo: 'Wireframes para Web Institucional',
+    descripcion: 'Este proyecto es el diseño de los wireframes para una página web institucional. El objetivo principal fue establecer la arquitectura de información y la estructura básica del sitio, asegurando una navegación intuitiva y una jerarquía de contenido clara para los diferentes públicos. Se centró en la funcionalidad y la usabilidad para guiar el posterior desarrollo visual y de contenido del portal.',
+    tecnologias: ['Penpot'],
+    enlace: 'https://design.penpot.app/#/view?file-id=bbaed550-e65f-8192-8006-a1edcc85f616&page-id=e21d721b-b52f-80fd-8006-a1aa99ec95c4&section=interactions&index=0&share-id=bbaed550-e65f-8192-8006-a1ef450e851e',
   },
 ];
 
